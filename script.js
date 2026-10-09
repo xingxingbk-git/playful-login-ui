@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const r = new Rive({
-        src: '/riv/插画.riv', // 使用绝对路径适配 Vite 的 public 目录
+        src: '/riv/illustration.riv', // 使用绝对路径适配 Vite 的 public 目录
         canvas: canvas,
         stateMachines: 'State Machine 1',
         autoplay: true,

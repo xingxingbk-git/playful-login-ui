@@ -118,7 +118,7 @@ npm run preview
 ├── package-lock.json          # npm 依赖版本锁定
 ├── public/
 │   ├── riv/
-│   │   ├── 插画.riv           # 左侧角色动画
+│   │   ├── illustration.riv   # 左侧角色动画
 │   │   └── eyes.riv           # 密码显示/隐藏的眼睛动画
 │   └── svg/
 │       ├── logo.svg
@@ -134,7 +134,7 @@ npm run preview
 
 两份动画都运行名为 `State Machine 1` 的状态机。页面优先通过 Rive ViewModel 绑定数据，主插画在找不到相应属性时回退到同名状态机输入。
 
-### 左侧插画：`插画.riv`
+### 左侧插画：`illustration.riv`
 
 使用名为 `Login` 的 ViewModel：
 
@@ -163,4 +163,4 @@ npm run preview
 - **Remember for 30 days**：可以勾选，但当前提交流程不会保存新的记住登录设置；初始化时仍会读取已有的本地记录。
 - **Google 登录、忘记密码与注册**：当前为界面展示，尚未连接实际功能。
 - **邮箱校验**：输入事件检查邮箱格式并触发动画；提交还受 HTML 原生 `type="email"` 和 `required` 校验约束，空值或无效邮箱可能先被浏览器拦截。
-- **部署路径**：虽然 Vite 设置了 `base: './'`，`script.js` 中两份动画仍使用 `/riv/插画.riv` 与 `/riv/eyes.riv` 这样的根路径。部署到 `/项目名/` 等子路径时，需要同步调整动画资源地址，不能仅凭 `base` 配置判断动画可正常加载。
+- **部署路径**：虽然 Vite 设置了 `base: './'`，`script.js` 中两份动画仍使用 `/riv/illustration.riv` 与 `/riv/eyes.riv` 这样的根路径。部署到 `/项目名/` 等子路径时，需要同步调整动画资源地址，不能仅凭 `base` 配置判断动画可正常加载。
